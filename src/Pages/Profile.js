@@ -17,7 +17,7 @@ const Profile = () => {
           width: "50%",
         }}
         src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        alt="profile image"
+        alt="profile"
       />
 
       <p style={{ padding: "20px" }}>

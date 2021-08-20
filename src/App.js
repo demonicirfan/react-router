@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import About from "./Pages/About";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
+import Path from "./Pages/Path";
 import Profile from "./Pages/Profile";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Route path="/about" component={About} exact />
       <Route path="/profile" component={Profile} exact />
       <Route component={Error} exact />
-      <Route path="/post" component={Post}/>
+      <Route path="/path/:id" component={Path}/>
     </BrowserRouter>
   );
 }
