@@ -1,12 +1,14 @@
 import { BrowserRouter, Redirect, Route } from "react-router-dom";
-import "./App.css";
+import React, { useState } from "react";
+
 import Header from "./Components/Header";
 import About from "./Pages/About";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
 import Path from "./Pages/Path";
 import Profile from "./Pages/Profile";
-import React, { useState } from "react";
+
+import "./App.css";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -22,7 +24,7 @@ function App() {
       <Route path="/" component={Home} exact />
       <Route path="/about" component={About} exact />
       <Route path="/profile" exact>
-        {login ? <Profile /> : <Redirect to="/" />}
+       <Profile login={login}/>
       </Route>
       <Route component={Error} exact />
       <Route path="/path/:id" component={Path} />

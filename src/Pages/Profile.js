@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
-const Profile = () => {
+const Profile = ({ login }) => {
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!login) {
+      history.push("/");
+    }
+  }, [login, history]);
   return (
     <div style={{ color: "red" }}>
       <h1 style={{ display: "flex", justifyContent: "center" }}>
